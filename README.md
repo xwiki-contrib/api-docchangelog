@@ -3,7 +3,7 @@
 Expose a REST API to get a log of documents modifications.
 
 * Project Lead: [Thomas Mortagne](http://www.xwiki.org/xwiki/bin/view/XWiki/ThomasMortagne)
-* [Documentation & Downloads](http://extensions.xwiki.org/xwiki/bin/view/Extension/DocumentChangelogServer/)
+* [Documentation & Downloads](http://extensions.xwiki.org/xwiki/bin/view/Extension/DocumentChangelogServer)
 * [Issue Tracker](http://jira.xwiki.org/browse/DOCCHANGEL)
 * Communication: Communication: [Forum](https://forum.xwiki.org/)
 * [Development Practices](http://dev.xwiki.org)
