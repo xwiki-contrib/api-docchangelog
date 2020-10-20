@@ -1,0 +1,4 @@
+org.xwiki.contrib.docchangelog.DocChangelogRESTResource
+org.xwiki.contrib.docchangelog.internal.DocChangeListener
+org.xwiki.contrib.docchangelog.internal.DocChangelogInitializer
+org.xwiki.contrib.docchangelog.internal.DocChangeStore
