@@ -25,7 +25,7 @@
   <parent>
     <groupId>org.xwiki.contrib.docchangelog</groupId>
     <artifactId>docchangelog</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
   </parent>
 
   <artifactId>docchangelog-model</artifactId>

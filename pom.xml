@@ -31,7 +31,7 @@
   <groupId>org.xwiki.contrib.docchangelog</groupId>
   <artifactId>docchangelog</artifactId>
   <packaging>pom</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
 
   <name>Document Changelog</name>
   <description>Expose a REST API to get a log of documents modifications</description>
@@ -59,6 +59,6 @@
     <connection>scm:git:git://github.com/xwiki-contrib/api-docchangelog.git</connection>
     <developerConnection>scm:git:git@github.com:xwiki-contrib/api-docchangelog.git</developerConnection>
     <url>https://github.com/xwiki-contrib/api-docchangelog</url>
-    <tag>HEAD</tag>
+    <tag>docchangelog-1.0</tag>
   </scm>
 </project>
