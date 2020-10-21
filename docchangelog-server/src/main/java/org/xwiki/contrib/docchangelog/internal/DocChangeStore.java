@@ -158,9 +158,11 @@ public class DocChangeStore implements Disposable, Initializable
         try {
             DocChange change = firstChange;
             do {
-                // Bulletproof: use saveOrUpdate instead of save to avoid crashing when a document is saved twice in
-                // less that one second (which is the granularity of the timestamp in MySQL for example)
-                hibernateStore.getSession(xcontext).saveOrUpdate(firstChange);
+                if (change != WAKEUP) {
+                    // Bulletproof: use saveOrUpdate instead of save to avoid crashing when a document is saved twice in
+                    // less that one second (which is the granularity of the timestamp in MySQL for example)
+                    hibernateStore.getSession(xcontext).saveOrUpdate(firstChange);
+                }
 
                 change = this.queue.poll();
             } while (change != null);
