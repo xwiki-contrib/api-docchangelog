@@ -27,6 +27,7 @@
     <sequence>
       <element name="reference" type="string"></element>
       <element name="locale" type="string"></element>
+      <element name="realLocale" type="string"></element>
       <element name="date" type="string"></element>
       <element name="type" type="string"></element>
     </sequence>

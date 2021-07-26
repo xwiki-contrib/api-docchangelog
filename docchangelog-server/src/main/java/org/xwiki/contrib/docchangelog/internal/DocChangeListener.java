@@ -81,6 +81,7 @@ public class DocChangeListener extends AbstractEventListener
 
         XWikiDocument document = (XWikiDocument) source;
 
-        this.store.add(document.getDocumentReference(), document.getLocale(), document.getDate(), type);
+        this.store.add(document.getDocumentReference(), document.getLocale(), document.getRealLocale(),
+            document.getDate(), type);
     }
 }

@@ -49,8 +49,6 @@ import com.xpn.xwiki.XWikiException;
 @Singleton
 public class DocChangelogRESTResource extends XWikiResource
 {
-    private static final SimpleDateFormat FORMAT = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss zzz");
-
     @Inject
     private DocChangeStore store;
 
@@ -74,15 +72,18 @@ public class DocChangelogRESTResource extends XWikiResource
             logs.setEnd(end);
         }
 
-        Date startDate = start != null ? FORMAT.parse(start) : null;
-        Date endDate = end != null ? FORMAT.parse(end) : null;
+        SimpleDateFormat dateFormat = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss zzz");
+
+        Date startDate = start != null ? dateFormat.parse(start) : null;
+        Date endDate = end != null ? dateFormat.parse(end) : null;
 
         for (DocChange change : this.store.getChanges(startDate, endDate)) {
             DocumentLog log = new DocumentLog();
 
             log.setReference(change.getReference());
             log.setLocale(change.getLocale());
-            log.setDate(FORMAT.format(change.getDate()));
+            log.setRealLocale(change.getRealLocale());
+            log.setDate(dateFormat.format(change.getDate()));
             log.setType(change.getType().toString());
 
             logs.getLogs().add(log);

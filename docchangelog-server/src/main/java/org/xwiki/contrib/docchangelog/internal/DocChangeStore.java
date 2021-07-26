@@ -106,15 +106,17 @@ public class DocChangeStore implements Disposable, Initializable
      * 
      * @param reference the reference of the modified document
      * @param locale the locale of the modified document
+     * @param realLocale the actual locale of the modified document
      * @param date the date at which the document was modified
      * @param type the type of modification applied on the document
      */
-    public void add(DocumentReference reference, Locale locale, Date date, DocumentChangeType type)
+    public void add(DocumentReference reference, Locale locale, Locale realLocale, Date date, DocumentChangeType type)
     {
         DocChange docChange = new DocChange();
 
         docChange.setReference(this.serializer.serialize(reference));
         docChange.setLocale(locale.toString());
+        docChange.setLocale(realLocale.toString());
         docChange.setDate(date);
         docChange.setType(type);
 
