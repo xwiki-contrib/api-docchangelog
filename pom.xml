@@ -83,6 +83,144 @@
                     "oldValue": "{\"reference\", \"locale\", \"date\", \"type\"}",
                     "newValue": "{\"reference\", \"locale\", \"realLocale\", \"date\", \"type\"}",
                     "justification": "Not a breackage, add a new field"
+                  },
+                  {
+                    "code": "java.field.typeChanged",
+                    "old": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLog.date",
+                    "new": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLog.date",
+                    "justification": "Changed date format"
+                  },
+                  {
+                    "code": "java.annotation.attributeAdded",
+                    "old": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLog.date",
+                    "new": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLog.date",
+                    "annotation": "@javax.xml.bind.annotation.XmlElement(required = true, type = java.lang.String.class)",
+                    "attribute": "type",
+                    "justification": "Changed date format"
+                  },
+                  {
+                    "code": "java.annotation.added",
+                    "old": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLog.date",
+                    "new": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLog.date",
+                    "annotation": "@javax.xml.bind.annotation.XmlSchemaType(name = \"dateTime\")",
+                    "justification": "Changed date format"
+                  },
+                  {
+                    "code": "java.annotation.added",
+                    "old": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLog.date",
+                    "new": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLog.date",
+                    "annotation": "@javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter(org.xwiki.contrib.docchangelog.xwiki.model.jaxb.Adapter1.class)",
+                    "justification": "Changed date format"
+                  },
+                  {
+                    "code": "java.method.returnTypeChanged",
+                    "old": "method java.lang.String org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLog::getDate()",
+                    "new": "method java.util.Calendar org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLog::getDate()",
+                    "justification": "Changed date format"
+                  },
+                  {
+                    "code": "java.method.parameterTypeChanged",
+                    "old": "parameter void org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLog::setDate(===java.lang.String===)",
+                    "new": "parameter void org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLog::setDate(===java.util.Calendar===)",
+                    "justification": "Changed date format"
+                  },
+                  {
+                    "code": "java.method.parameterTypeChanged",
+                    "old": "parameter org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLog org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLog::withDate(===java.lang.String===)",
+                    "new": "parameter org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLog org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLog::withDate(===java.util.Calendar===)",
+                    "justification": "Changed date format"
+                  },
+                  {
+                    "code": "java.field.typeChanged",
+                    "old": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs.end",
+                    "new": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs.end",
+                    "justification": "Changed date format"
+                  },
+                  {
+                    "code": "java.annotation.attributeAdded",
+                    "old": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs.end",
+                    "new": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs.end",
+                    "annotation": "@javax.xml.bind.annotation.XmlElement(required = true, type = java.lang.String.class)",
+                    "attribute": "type",
+                    "justification": "Changed date format"
+                  },
+                  {
+                    "code": "java.annotation.added",
+                    "old": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs.end",
+                    "new": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs.end",
+                    "annotation": "@javax.xml.bind.annotation.XmlSchemaType(name = \"dateTime\")",
+                    "justification": "Changed date format"
+                  },
+                  {
+                    "code": "java.annotation.added",
+                    "old": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs.end",
+                    "new": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs.end",
+                    "annotation": "@javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter(org.xwiki.contrib.docchangelog.xwiki.model.jaxb.Adapter1.class)",
+                    "justification": "Changed date format"
+                  },
+                  {
+                    "code": "java.field.typeChanged",
+                    "old": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs.start",
+                    "new": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs.start",
+                    "justification": "Changed date format"
+                  },
+                  {
+                    "code": "java.annotation.attributeAdded",
+                    "old": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs.start",
+                    "new": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs.start",
+                    "annotation": "@javax.xml.bind.annotation.XmlElement(required = true, type = java.lang.String.class)",
+                    "attribute": "type",
+                    "justification": "Changed date format"
+                  },
+                  {
+                    "code": "java.annotation.added",
+                    "old": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs.start",
+                    "new": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs.start",
+                    "annotation": "@javax.xml.bind.annotation.XmlSchemaType(name = \"dateTime\")",
+                    "justification": "Changed date format"
+                  },
+                  {
+                    "code": "java.annotation.added",
+                    "old": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs.start",
+                    "new": "field org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs.start",
+                    "annotation": "@javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter(org.xwiki.contrib.docchangelog.xwiki.model.jaxb.Adapter1.class)",
+                    "justification": "Changed date format"
+                  },
+                  {
+                    "code": "java.method.returnTypeChanged",
+                    "old": "method java.lang.String org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs::getEnd()",
+                    "new": "method java.util.Calendar org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs::getEnd()",
+                    "justification": "Changed date format"
+                  },
+                  {
+                    "code": "java.method.returnTypeChanged",
+                    "old": "method java.lang.String org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs::getStart()",
+                    "new": "method java.util.Calendar org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs::getStart()",
+                    "justification": "Changed date format"
+                  },
+                  {
+                    "code": "java.method.parameterTypeChanged",
+                    "old": "parameter void org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs::setEnd(===java.lang.String===)",
+                    "new": "parameter void org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs::setEnd(===java.util.Calendar===)",
+                    "justification": "Changed date format"
+                  },
+                  {
+                    "code": "java.method.parameterTypeChanged",
+                    "old": "parameter void org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs::setStart(===java.lang.String===)",
+                    "new": "parameter void org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs::setStart(===java.util.Calendar===)",
+                    "justification": "Changed date format"
+                  },
+                  {
+                    "code": "java.method.parameterTypeChanged",
+                    "old": "parameter org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs::withEnd(===java.lang.String===)",
+                    "new": "parameter org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs::withEnd(===java.util.Calendar===)",
+                    "justification": "Changed date format"
+                  },
+                  {
+                    "code": "java.method.parameterTypeChanged",
+                    "old": "parameter org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs::withStart(===java.lang.String===)",
+                    "new": "parameter org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLogs::withStart(===java.util.Calendar===)",
+                    "justification": "Changed date format"
                   }
                 ]
               }
