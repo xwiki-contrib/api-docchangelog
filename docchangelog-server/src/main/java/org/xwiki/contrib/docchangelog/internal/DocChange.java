@@ -46,14 +46,6 @@ public class DocChange implements Serializable
     private DocumentChangeType type;
 
     /**
-     * @return the reference of the modified document
-     */
-    public String getReference()
-    {
-        return this.reference;
-    }
-
-    /**
      * @param reference the reference of the modified document
      */
     public void setReference(String reference)
@@ -62,11 +54,11 @@ public class DocChange implements Serializable
     }
 
     /**
-     * @return the locale of the document
+     * @return the reference of the modified document
      */
-    public String getLocale()
+    public String getReference()
     {
-        return this.locale;
+        return this.reference;
     }
 
     /**
@@ -78,12 +70,11 @@ public class DocChange implements Serializable
     }
 
     /**
-     * @return the actual locale of the document
-     * @since 1.1
+     * @return the locale of the document
      */
-    public String getRealLocale()
+    public String getLocale()
     {
-        return this.realLocale;
+        return this.locale;
     }
 
     /**
@@ -96,7 +87,17 @@ public class DocChange implements Serializable
     }
 
     /**
+     * @return the actual locale of the document
+     * @since 1.1
+     */
+    public String getRealLocale()
+    {
+        return this.realLocale;
+    }
+
+    /**
      * @param date the date of the modification
+     * @since 1.1
      */
     public void setDate(Date date)
     {
@@ -105,6 +106,7 @@ public class DocChange implements Serializable
 
     /**
      * @return the date of the modification
+     * @since 1.1
      */
     public Date getDate()
     {
