@@ -63,4 +63,33 @@
     <url>https://github.com/xwiki-contrib/api-docchangelog</url>
     <tag>HEAD</tag>
   </scm>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.revapi</groupId>
+        <artifactId>revapi-maven-plugin</artifactId>
+        <configuration>
+          <analysisConfiguration><![CDATA[
+            {
+              "revapi": {
+                "ignore" : [
+                  {
+                    "code": "java.annotation.attributeValueChanged",
+                    "old": "class org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLog",
+                    "new": "class org.xwiki.contrib.docchangelog.xwiki.model.jaxb.DocumentLog",
+                    "annotationType": "javax.xml.bind.annotation.XmlType",
+                    "attribute": "propOrder",
+                    "oldValue": "{\"reference\", \"locale\", \"date\", \"type\"}",
+                    "newValue": "{\"reference\", \"locale\", \"realLocale\", \"date\", \"type\"}",
+                    "justification": "Not a breackage, add a new field"
+                  }
+                ]
+              }
+            }
+          ]]></analysisConfiguration>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
