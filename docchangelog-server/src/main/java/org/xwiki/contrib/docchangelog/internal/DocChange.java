@@ -140,6 +140,8 @@ public class DocChange implements Serializable
             EqualsBuilder builder = new EqualsBuilder();
 
             builder.append(getReference(), other.getReference());
+            builder.append(getLocale(), other.getLocale());
+            builder.append(getRealLocale(), other.getRealLocale());
             builder.append(getDate(), other.getDate());
             builder.append(getType(), other.getType());
 
@@ -155,6 +157,8 @@ public class DocChange implements Serializable
         HashCodeBuilder builder = new HashCodeBuilder();
 
         builder.append(getReference());
+        builder.append(getLocale());
+        builder.append(getRealLocale());
         builder.append(getDate());
         builder.append(getType());
 
