@@ -28,6 +28,7 @@
     <composite-id>
       <key-property name="reference" type="string" length="255" />
       <key-property name="locale" type="string" length="5" />
+      <key-property name="realLocale" type="string" length="5" />
       <key-property name="date" type="timestamp">
         <column name="date" index="DOCCHANGE_DATE"/>
       </key-property>
