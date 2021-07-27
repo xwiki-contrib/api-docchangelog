@@ -116,7 +116,7 @@ public class DocChangeStore implements Disposable, Initializable
 
         docChange.setReference(this.serializer.serialize(reference));
         docChange.setLocale(locale.toString());
-        docChange.setLocale(realLocale.toString());
+        docChange.setRealLocale(realLocale.toString());
         docChange.setDate(date);
         docChange.setType(type);
 

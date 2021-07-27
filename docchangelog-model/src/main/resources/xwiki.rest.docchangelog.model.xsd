@@ -28,7 +28,7 @@
       <element name="reference" type="string"></element>
       <element name="locale" type="string"></element>
       <element name="realLocale" type="string"></element>
-      <element name="date" type="string"></element>
+      <element name="date" type="dateTime"></element>
       <element name="type" type="string"></element>
     </sequence>
   </complexType>
@@ -38,8 +38,8 @@
 
   <complexType name="DocumentLogs">
     <sequence>
-      <element name="start" type="string"></element>
-      <element name="end" type="string"></element>
+      <element name="start" type="dateTime"></element>
+      <element name="end" type="dateTime"></element>
       <element name="logs" type="docchangelog:DocumentLog" minOccurs="0" maxOccurs="unbounded"></element>
     </sequence>
   </complexType>

@@ -22,6 +22,7 @@ package org.xwiki.contrib.docchangelog;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 import javax.inject.Inject;
@@ -65,17 +66,17 @@ public class DocChangelogRESTResource extends XWikiResource
     {
         DocumentLogs logs = new DocumentLogs();
 
-        if (start != null) {
-            logs.setStart(start);
-        }
-        if (end != null) {
-            logs.setEnd(end);
-        }
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX");
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss zzz");
+        Date startDate = start != null ? dateFormat.parse(start.trim()) : null;
+        Date endDate = end != null ? dateFormat.parse(end.trim()) : null;
 
-        Date startDate = start != null ? dateFormat.parse(start) : null;
-        Date endDate = end != null ? dateFormat.parse(end) : null;
+        if (startDate != null) {
+            logs.setStart(toCalendar(startDate));
+        }
+        if (endDate != null) {
+            logs.setEnd(toCalendar(endDate));
+        }
 
         for (DocChange change : this.store.getChanges(startDate, endDate)) {
             DocumentLog log = new DocumentLog();
@@ -83,12 +84,21 @@ public class DocChangelogRESTResource extends XWikiResource
             log.setReference(change.getReference());
             log.setLocale(change.getLocale());
             log.setRealLocale(change.getRealLocale());
-            log.setDate(dateFormat.format(change.getDate()));
             log.setType(change.getType().toString());
+
+            log.setDate(toCalendar(change.getDate()));
 
             logs.getLogs().add(log);
         }
 
         return logs;
+    }
+
+    private Calendar toCalendar(Date date)
+    {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+
+        return calendar;
     }
 }
