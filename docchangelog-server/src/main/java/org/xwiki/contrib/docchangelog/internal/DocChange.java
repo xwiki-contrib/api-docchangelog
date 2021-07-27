@@ -97,7 +97,6 @@ public class DocChange implements Serializable
 
     /**
      * @param date the date of the modification
-     * @since 1.1
      */
     public void setDate(Date date)
     {
@@ -106,7 +105,6 @@ public class DocChange implements Serializable
 
     /**
      * @return the date of the modification
-     * @since 1.1
      */
     public Date getDate()
     {
