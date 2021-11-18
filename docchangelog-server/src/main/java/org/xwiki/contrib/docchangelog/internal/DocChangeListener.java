@@ -66,11 +66,16 @@ public class DocChangeListener extends AbstractEventListener
     @Override
     public void onEvent(Event event, Object source, Object data)
     {
+        XWikiDocument document = (XWikiDocument) source;
+
         DocumentChangeType type;
         if (event instanceof DocumentCreatedEvent) {
             type = DocumentChangeType.CREATE;
         } else if (event instanceof DocumentDeletedEvent) {
             type = DocumentChangeType.DELETE;
+
+            // Use the previous version of the document since the new one is missing information
+            document = document.getOriginalDocument();
         } else if (event instanceof DocumentUpdatedEvent) {
             type = DocumentChangeType.UPDATE;
         } else {
@@ -78,8 +83,6 @@ public class DocChangeListener extends AbstractEventListener
 
             return;
         }
-
-        XWikiDocument document = (XWikiDocument) source;
 
         this.store.add(document.getDocumentReference(), document.getLocale(), document.getRealLocale(),
             document.getDate(), type);
